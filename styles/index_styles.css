@@ -1,0 +1,358 @@
+#FirstPageTop {
+    height:100vh;
+    width: 100vw;
+    background-image: url("/images/image00006.jpeg") !important;
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.navbar-scroll {
+    transition: transform 0.5s ease-in-out;
+}
+body {
+    font-family: 'Roboto Mono', monospace;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    overflow: auto; 
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Mono', monospace;
+}
+.bold{
+    font-weight: bold;
+}
+.text-justify-right{
+    text-align: right;
+}
+.navbar-scroll.navbar-up {
+    transform: translateY(-100%);
+}
+#text {
+    text-align: justify;
+}
+.hoverMax {
+    transition: transform 0.3s ease-in-out;
+}
+.hoverMaxGmail {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hoverMaxGmail:hover {
+    transform: scale(1.6);
+}
+.gmailLogo {
+    transform: scale(1.2);
+}
+.hoverMax:hover {
+    transform: scale(1.3);
+}
+.text-container {
+    width: 50%;
+    padding: 0 20px; 
+}
+#motorsport-block {
+    justify-content: end;
+}
+#imagen-ajuste-media {
+    max-width: 100%;
+    height: auto;
+}
+#img-container {
+    width: 25vw;
+}
+.btn-more {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btnAllProjects {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+    p {
+        font-size: 2.5vw;
+    }
+    #imagen-ajuste-media {
+        height: 180px;
+        width: 180px;
+        max-width: none;
+    }
+    #text-block-index1{
+        height: 200px;
+        width: 230px;
+    }
+    #img-container {
+        height: 180px;
+        width: 180px;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    #navbar-text {
+        font-size: 3vw;
+        margin-right: none;
+    }
+}
+
+/* ------------------------------------------------ */
+
+.boton {
+    width: 200px;
+    height: 50px;
+    display: block;
+    position: relative;
+}
+
+.botontext {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+    line-height: 50px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.twist {
+    display: block;
+    height: 100%;
+    width: 25%;
+    position: relative;
+    float: left;
+    margin-left: -4px;
+}
+
+.twist:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: white;
+    bottom: 100%;
+    position: absolute;
+    transform-origin: center bottom 0px; 
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 0, -1, -0.003, 
+                        0, 1, 0, 0, 
+                        0, 0, 0, 1);
+    
+-webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+-moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+ -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+}
+
+.twist:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    height: 100%;
+    background: white;
+    transform-origin: center top 0px;
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 1, 0, 0, 
+                        0, 0, 1, -0.003, 
+                        0, -50, 0, 1);
+    
+-webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+-moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+ -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+}
+
+.boton:hover .twist:before {
+    background: black;
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 1, 0, 0, 
+                        0, 0, 1, 0.003, 
+                        0, 50, 0, 1);
+}
+
+.boton:hover .twist:after {
+    background: black;
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 0, -1, 0.003, 
+                        0, 1, 0, 0, 
+                        0, 0, 0, 1);
+}
+
+.boton .twist:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.boton .twist:nth-of-type(1):before,
+.boton .twist:nth-of-type(1):after {
+    transition-delay: 0s;
+}
+
+.boton .twist:nth-of-type(2):before,
+.boton .twist:nth-of-type(2):after {
+    transition-delay: 0.1s;
+}
+
+.boton .twist:nth-of-type(3):before,
+.boton .twist:nth-of-type(3):after {
+    transition-delay: 0.2s;
+}
+
+.boton .twist:nth-of-type(4):before,
+.boton .twist:nth-of-type(4):after {
+    transition-delay: 0.3s;
+}
+
+.boton .botontext:nth-of-type(1) {
+    color: white;
+    bottom: 100%;
+    transform-origin: center bottom 0px; 
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 0, -1, -0.003, 
+                        0, 1, 0, 0, 
+                        0, 0, 0, 1);
+    
+-webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+-moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+ -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+}
+
+.boton:hover .botontext:nth-of-type(1) {
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 1, 0, 0, 
+                        0, 0, 1, 0.003, 
+                        0, 50, 0, 1);
+    /*border: 0.5px white solid;*/
+}
+
+.boton .botontext:nth-of-type(2) {
+    color: black;
+    top: 100%;
+    transform-origin: center top 0px;
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 1, 0, 0, 
+                        0, 0, 1, -0.003, 
+                        0, -50, 0, 1);
+    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+}
+
+.boton:hover .botontext:nth-of-type(2) {
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 0, -1, 0.003, 
+                        0, 1, 0, 0, 
+                        0, 0, 0, 1);
+}
+
+/* BUTTONS MORE */
+.aspan {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    border: 1px black;
+}
+.aspan span {
+    padding: 10px;
+    transition: .5s;
+    position: relative;
+}
+.aspan span:nth-child(1) {
+    color: white;
+    background: black;
+}
+.aspan span:nth-child(2) {
+    color: black;
+    background: white;
+}
+.aspan span:nth-child(1):before {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    padding: 10px;
+    transition: 0.5S;
+    transform-origin: top;
+    transform: rotateX(90deg) translateY(-50%);
+}
+.aspan:hover span:nth-child(1):before {
+    color: black;
+    transform: rotateX(0deg) translateY(0%);
+} 
+.aspan span:nth-child(2):before {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    padding: 10px;
+    transition: 0.5S;
+    transform-origin: bottom;
+    transform: rotateX(90deg) translateY(50%);
+}
+.aspan:hover span:nth-child(2):before {
+    color: white;
+    transform: rotateX(0deg) translateY(0%);
+} 
+.aspan span:nth-child(1):after {
+  content: attr(data-attr);
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  background: black;
+  transform-origin: bottom;
+  transform: rotateX(0deg) translateY(0%);
+  transition: 0.5s;
+}
+.aspan:hover span:nth-child(1):after {
+  color: black;
+  transform: rotateX(90deg) translateY(50%);
+}
+.aspan span:nth-child(2):after {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+    background: white;
+    padding: 10px;
+    transition: 0.5S;
+    transform-origin: top;
+    transform: rotateX(0deg) translateY(0%);
+}
+.aspan:hover span:nth-child(2):after {
+    transform: rotateX(90deg) translateY(-50%);
+} 
+

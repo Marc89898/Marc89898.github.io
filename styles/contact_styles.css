@@ -1,0 +1,6 @@
+@media (max-width: 767px) {
+    #navbar-text {
+        font-size: 3vw;
+        margin-right: none;
+    }
+}

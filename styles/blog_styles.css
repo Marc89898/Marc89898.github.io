@@ -1,0 +1,33 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    scrollbar-width: thin; /* Para navegadores basados en Firefox */
+    scrollbar-color: transparent transparent; /* Para navegadores basados en Firefox */
+    overflow: auto; /* Para navegadores basados en WebKit (Chrome, Safari, etc.) */
+}
+::-webkit-scrollbar {
+    width: 6px; /* Ancho de la barra de desplazamiento para navegadores basados en WebKit */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Color del pulgar de la barra de desplazamiento */
+}
+
+
+h1, h2, h3 {
+    font-family: 'Roboto Mono', monospace;
+}
+#text {
+    text-align: justify;
+}
+.navbar-scroll {
+    transition: transform 0.5s ease-in-out;
+}
+.navbar-scroll.navbar-up {
+    transform: translateY(-100%);
+}
+@media (max-width: 767px) {
+    #navbar-text {
+        font-size: 3vw;
+        margin-right: none;
+    }
+}
