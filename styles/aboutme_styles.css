@@ -62,6 +62,8 @@ h1, h2, h3 {
 #imageAboutMe {
     height: 60vh;
     width: 40vh;
+    max-width: 100%;
+    height: auto;
 }
 
 #Pagina {
@@ -94,10 +96,6 @@ h1, h2, h3 {
     background-size: cover;
     z-index: -1;
 }
-.imgenesAboutMe {
-    max-width: 100%;
-    height: auto;
-}
 .AboutMeTitle {
     text-align: center; 
     font-size: 20;
@@ -113,8 +111,38 @@ h1, h2, h3 {
         font-size: 3vw;
         margin-right: none;
     }
+    #imageAboutMe {
+        height: 40vh;
+        width: 20vh;
+        max-width: 100%;
+        height: auto;
+    }
+    .square {
+        position: absolute;
+        top: -50px;
+        left: -30px;
+        height: 40vh;
+        width: 20vh;
+        max-width: 100%;
+        max-height: 100%;
+        padding-top: 30%;
+        background-image: url("/images/Rectangle\ 6.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
     #textimg{
         width: 320px;
         height: 100px;
+    }
+    #Pagina {
+        height: 100vh;
+    }
+
+    #foto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: none;
     }
 }

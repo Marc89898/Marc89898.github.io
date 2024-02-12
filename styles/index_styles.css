@@ -17,7 +17,14 @@
     border-radius: 5px;
     z-index: 9999;
 }
-
+#PrincipalTitle {
+    font-size: 4rem;
+}
+#SecondaryTitle {
+    font-size: 1.5rem;
+    opacity: 0.5;
+    color: white;
+}
 .navbar-scroll {
     transition: transform 0.5s ease-in-out;
 }
