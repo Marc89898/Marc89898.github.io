@@ -129,9 +129,9 @@ h1, h2, h3 {
         display: none;
     }
     #WhiteSquare{
-        margin-top: 100px;
+        margin-top: 10vh;
         width: 100vw;
-        height: 100vh;
+        height: 60vh;
     }
     .CibersecurityContent{
         font-size: 1.3vh;
@@ -152,7 +152,7 @@ h1, h2, h3 {
         padding-top: 3vh;
     }
     #BlackSquare {
-        height: 100vh;
+        height: 50vh;
         width: 100vw;
     }
     #navbar-text {
