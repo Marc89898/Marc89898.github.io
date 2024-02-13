@@ -282,84 +282,147 @@ h1, h2, h3 {
 }
 
 /* BUTTONS MORE */
-.aspan {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-    border: 1px black;
+.btn-17,
+.btn-17 *,
+.btn-17 :after,
+.btn-17 :before,
+.btn-17:after,
+.btn-17:before {
+  border: 0 solid black;
+  /*box-sizing: border-box;*/
 }
-.aspan span {
-    padding: 10px;
-    transition: .5s;
-    position: relative;
+.text-container {
+    min-width: min-content;
 }
-.aspan span:nth-child(1) {
-    color: white;
-    background: black;
+.btn-17 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
 }
-.aspan span:nth-child(2) {
-    color: black;
-    background: white;
+
+.btn-17:disabled {
+  cursor: default;
 }
-.aspan span:nth-child(1):before {
-    content: attr(data-attr);
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: white;
-    padding: 10px;
-    transition: 0.5S;
-    transform-origin: top;
-    transform: rotateX(90deg) translateY(-50%);
+
+.btn-17:-moz-focusring {
+  outline: auto;
 }
-.aspan:hover span:nth-child(1):before {
-    color: black;
-    transform: rotateX(0deg) translateY(0%);
-} 
-.aspan span:nth-child(2):before {
-    content: attr(data-attr);
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: black;
-    padding: 10px;
-    transition: 0.5S;
-    transform-origin: bottom;
-    transform: rotateX(90deg) translateY(50%);
+
+.btn-17 svg {
+  display: block;
+  vertical-align: middle;
 }
-.aspan:hover span:nth-child(2):before {
-    color: white;
-    transform: rotateX(0deg) translateY(0%);
-} 
-.aspan span:nth-child(1):after {
-  content: attr(data-attr);
-  padding: 10px;
+
+.btn-17 [hidden] {
+  display: none;
+}
+
+.btn-17 {
+  /*border-radius: 99rem;*/
+  border-width: 2px;
+  padding: 0.8rem 3rem;
+  z-index: 0;
+}
+
+.btn-17,
+.btn-17 .text-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-17 .text-container {
+  display: block;
+  mix-blend-mode: difference;
+}
+
+.btn-17 .text {
+  display: block;
+  position: relative;
+}
+
+.btn-17:hover .text {
+  -webkit-animation: move-up-alternate 0.3s forwards;
+  animation: move-up-alternate 0.3s forwards;
+}
+
+@-webkit-keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-up-alternate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.btn-17:after,
+.btn-17:before {
+  --skew: 0.2;
+  background: #fff;
+  content: "";
+  display: block;
+  height: 102%;
+  left: calc(-50% - 50% * var(--skew));
+  pointer-events: none;
   position: absolute;
-  top: 0;
-  left: 0;
-  color: white;
-  background: black;
-  transform-origin: bottom;
-  transform: rotateX(0deg) translateY(0%);
-  transition: 0.5s;
+  top: -104%;
+  transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: 100%;
 }
-.aspan:hover span:nth-child(1):after {
-  color: black;
-  transform: rotateX(90deg) translateY(50%);
+
+.btn-17:after {
+  --progress: 0%;
+  left: calc(50% + 50% * var(--skew));
+  top: 102%;
+  z-index: -1;
 }
-.aspan span:nth-child(2):after {
-    content: attr(data-attr);
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: black;
-    background: white;
-    padding: 10px;
-    transition: 0.5S;
-    transform-origin: top;
-    transform: rotateX(0deg) translateY(0%);
+
+.btn-17:hover:before {
+  --progress: 100%;
 }
-.aspan:hover span:nth-child(2):after {
-    transform: rotateX(90deg) translateY(-50%);
-} 
+
+.btn-17:hover:after {
+  --progress: -102%;
+}
+
 
